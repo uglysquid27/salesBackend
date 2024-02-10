@@ -20,9 +20,7 @@ class UserSeeder extends Seeder
         DB::table('users')->insert([
             'name' => 'Admin',
             'user_level' => $adminLevelId,
-            'email' => 'admin@example.com',
             'password' => Hash::make('password'),
-            'email_verified_at' => now(),
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -30,9 +28,8 @@ class UserSeeder extends Seeder
         DB::table('users')->insert([
             'name' => 'Sales',
             'user_level' => $salesLevelId,
-            'email' => 'sales@example.com',
+            'nip' => '10872',
             'password' => Hash::make('password'),
-            'email_verified_at' => now(),
             'created_at' => now(),
             'updated_at' => now(),
         ]);
