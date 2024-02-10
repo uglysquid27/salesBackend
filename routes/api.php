@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\PaketController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -26,11 +27,17 @@ Route::post('/sales_add', [SalesController::class, 'store']);
 Route::put('/sales/{id}', [SalesController::class, 'update']);
 Route::delete('/sales/{id}', [SalesController::class, 'destroy']);
 
-//SALES CONTROLLER API//
+//PAKET CONTROLLER API//
 Route::get('/paket', [PaketController::class, 'index']);
 Route::post('/paket_add', [PaketController::class, 'store']);
 Route::put('/paket/{id}', [PaketController::class, 'update']);
 Route::delete('/paket/{id}', [PaketController::class, 'destroy']);
+
+//CUSTOMER CONTROLLER API//
+Route::get('/customer', [CustomerController::class, 'index']);
+Route::post('/customer_add', [CustomerController::class, 'store']);
+Route::put('/customer/{id}', [CustomerController::class, 'update']);
+Route::delete('/customer/{id}', [CustomerController::class, 'destroy']);
 
 
 
