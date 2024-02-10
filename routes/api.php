@@ -19,8 +19,11 @@ Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
     return $request->user();
 });
 
+//SALES CONTROLLER API//
 Route::get('/sales', [SalesController::class, 'index']);
 Route::post('/sales_add', [SalesController::class, 'store']);
+Route::put('/sales/{id}', [SalesController::class, 'update']);
+Route::delete('/sales/{id}', [SalesController::class, 'destroy']);
 
 
 
