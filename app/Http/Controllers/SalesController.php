@@ -29,7 +29,7 @@ class SalesController extends Controller
     {
         $request->validate([
             'name' => 'required|string',
-            'user_level' => 'required|string',
+            'user_level' => 'required|integer',
             'email' => 'required|email|unique:users,email',
             'password' => 'required|string|min:8',
         ]);
