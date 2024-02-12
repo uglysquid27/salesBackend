@@ -26,11 +26,10 @@ Route::prefix('/auth')->group(function () {
     Route::post('/login', [AuthController::class, 'Login']);
 });
 
-Route::middleware('auth:sanctum')->group(function () {
-    Route::prefix('/auth')->group(function () {
+Route::middleware('auth:sanctum')->group(function(){
+    Route::prefix('/auth')->group(function(){
         Route::post('/logout', [AuthController::class, 'Logout']);
     });
-
     //SALES CONTROLLER API//
     Route::get('/sales', [SalesController::class, 'index']);
     Route::post('/sales_add', [SalesController::class, 'store']);
